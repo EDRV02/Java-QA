@@ -10,16 +10,16 @@ public class Tax {
         if (salary <= 14999) {
             remaining = salary;
             System.out.println("Your tax rate is 0% and so your remainining is £" + remaining );
-        } else if (salary <= 19999 && salary >= 15000) {
+        } else if (salary <= 19999) {
             remaining = (int) (salary - tax10 * salary);
             System.out.println("Your tax rate is 10% and so your remainining is £" + remaining );
-        }else if ( salary <= 29999 && salary >= 20000) {
+        }else if (salary <= 29999) {
             remaining = (int) (salary - tax15 * salary);
             System.out.println("Your tax rate is 15% and so your remainining is £" + remaining );
-        }else if ( salary <= 44999 && salary >= 30000) {
+        }else if (salary <= 44999) {
             remaining = (int) (salary - tax20 * salary);
             System.out.println("Your tax rate is 20% and so your remainining is £" + remaining );
-        } else if ( salary >= 45000){
+        } else {
             remaining = (int) (salary - tax25 * salary);
             System.out.println("You are on max tax bracket of 25% and so your remaining salary is £" + remaining);
         }
