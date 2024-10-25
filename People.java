@@ -1,4 +1,8 @@
+import  java.util.ArrayList;
+import java.util.List;
+
 public class People {
+   static List<People> list = new ArrayList<People>();
     private String firtsName;
     private String lastName;
     private int dob;
@@ -8,6 +12,10 @@ public class People {
         this.firtsName= firtsName;
         this.lastName = lastName;
         peopleCount++;
+    }
+
+    public static void addPerson(People newP) {
+        list.add(newP);
     }
 
     public String getFirtsName() {
@@ -43,8 +51,13 @@ public class People {
     }
     public static void main(String[] args) {
         People n1 = new People("Eduardo", "Diaz", 22302);
+        People n2 = new People("Eduardo", "Diaz", 22302);
+        People n3 = new People("Eduardo", "Diaz", 22302);
         System.out.println(n1.toString());
-        System.out.println(n1.getPeopleCount());
+        People.addPerson(n1);
+        People.addPerson(n2);
+        People.addPerson(n3);
+        System.out.println(list.size());
 
     }
 }
